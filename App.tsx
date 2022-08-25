@@ -1,7 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Honeybadger from '@honeybadger-io/react-native';
 
 export default function App() {
+  Honeybadger.configure('hbp_xyz');
+  nonexistentFunction();
+
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
